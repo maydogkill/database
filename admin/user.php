@@ -25,14 +25,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="./Style.css" rel="stylesheet">
 </head>
-<body>
+<body class="p-3">
     <?php include_once './component/sidebar.php'?>
     <?php include_once './component/success.php'?>
     <?php include_once './component/error.php'?>
 
         <h3>Total user</h3>
 
-        <table class="tablebox">
+        <table class="tablebox table table-bordered w-75 m-auto mt-5">
             <tr>
                 <th class="">id</th>
                 <th class="">username</th>
@@ -48,6 +48,13 @@
                     <td><?php echo $row["gmail"] ?></td>
                     <td><?php echo $row["password"] ?></td>
                     <td><?php echo $row["rank"] ?></td>
+                    <td>
+                        <a href="" class="px-3 py-1 bg-warning text-black rounded-2">Edit</a>
+                        <form action="" method="post">
+                        <button type="submit" name="delete">Delete</button>
+                    </form>
+                    </td>
+
                 </tr>    
                 
             

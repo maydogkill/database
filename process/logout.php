@@ -2,5 +2,5 @@
 
     if (isset ($_POST["logout"])) {
         session_destroy();
-        header("location: ../index.php");
+        header("location: ../Login.php");
     }

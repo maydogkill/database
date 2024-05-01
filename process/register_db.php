@@ -27,6 +27,16 @@
             exit;
         }
 
+        // Check email
+        $check_email_sql = "SELECT * FROM user WHERE gmail = '$email'";
+        $query_check_email = mysqli_query($conn, $check_email_sql);
+        $result = mysqli_num_rows($query_check_email);
+        if ($result >= 1) {
+            $_SESSION["error"] = "this email is already used.";
+            header("location: ../register.php");
+            exit;
+        }
+
         //register
         if (empty($SESSION["error"])) {
             $sql = "INSERT INTO user (username, gmail, password, rank)

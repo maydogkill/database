@@ -4,28 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>maybe you should explode</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="./Style.css" rel="stylesheet">
 </head>
 <body>
-
-<div class="Box">
-    <?php include_once "./component/success.php" ?>
     <?php include_once "./component/error.php" ?>
+<form action="./process/login_db.php" method="post">
+    <div class="Box">
 
-    <?php if (!empty($_SESSION["username"])) { ?>
+    <h4>Sign-in</h4>
+    <p>uiahjkwfshjwesdhjfbwesjifbwyuihefgbwuihfbweuhf</p>
+    <input type="email" name="email">
+    <p>Password</p>
+    <input type="password" name="password">
+    <br>
+    <button type="submit" name="log">Submit</button>
 
-        <h1>Hello <?php echo $_SESSION["username"] ?></h1>
-        <p>Your email : <?php echo $_SESSION["email"] ?></p>
-        <p>Your rank : <?php echo $_SESSION["rank"] ?></p>
-        <form action="./process/logout.php" method="post">
-            <button type="submit" name="logout">logout</button>
-        </form>
-
-    <?php } ?>
-</div>    
+    </div>
+</form>
 
 </body>
 </html>

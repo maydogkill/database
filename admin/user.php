@@ -49,7 +49,7 @@
                     <td><?php echo $row["password"] ?></td>
                     <td><?php echo $row["rank"] ?></td>
                     <td>
-                        <a href="" class="px-3 py-1 bg-warning text-black rounded-2">Edit</a>
+                        <a href="./EditUser.php?userid=<?php echo $row["id"] ?>" class="px-3 py-1 bg-warning text-black rounded-2">Edit</a>
                         <form action="" method="post">
                         <button type="submit" name="delete">Delete</button>
                     </form>
